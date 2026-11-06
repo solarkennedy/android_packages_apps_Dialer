@@ -58,7 +58,7 @@ public class ClearCallLogDialog extends DialogFragment {
         DialerExecutorComponent.get(getContext())
             .dialerExecutorFactory()
             .createUiTaskBuilder(
-                getChildFragmentManager(),
+                getParentFragmentManager(),
                 "clearCallLogTask",
                 new ClearCallLogWorker(getActivity().getApplicationContext()))
             .onSuccess(this::onSuccess)
